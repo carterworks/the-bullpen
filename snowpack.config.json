@@ -3,5 +3,10 @@
     "public": "/",
     "src": "/_dist_"
   },
-  "plugins": []
+  "plugins": [
+    [
+      "@snowpack/plugin-build-script",
+      { "cmd": "postcss", "input": [".css"], "output": [".css"] }
+    ]
+  ]
 }
