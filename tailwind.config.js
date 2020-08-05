@@ -7,6 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        mono: [
+          'JetBrainsMono',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          'Liberation Mono',
+          'Courier New',
+          'monospace',
+        ],
+      },
       keyframes: {
         blink: {
           '0%, 100%': {
