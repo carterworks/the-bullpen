@@ -1,14 +1,22 @@
-#img {
-  display: block;
-  margin: auto;
-  height: 128px;
-  width: 128px;
-  padding: 2rem;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('/static/JetBrainsMono-Regular.woff2') format('woff2'),
+    url('/static/JetBrainsMono-Regular.woff') format('woff');
+
+  font-weight: normal;
+  font-style: normal;
 }
 
-#canvas {
-  display: block;
-  margin: 2rem auto;
-  width: 540px;
-  height: 540px;
+:root {
+  font-size: 20px;
+}
+
+* {
+  -webkit-font-feature-settings: 'liga' on, 'calt' on;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }

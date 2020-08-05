@@ -4,24 +4,83 @@
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Web site created using create-snowpack-app" />
+    <meta name="description" content="The usual tomfoolery" />
     <link rel="stylesheet" type="text/css" href="/index.css" />
-    <title>Snowpack App</title>
+    <title>#the-bullpen</title>
   </head>
-  <body>
-    <img id="img" src="/logo.svg" />
-    <canvas id="canvas"></canvas>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+  <body class="m-8 font-mono bg-gray-900 text-gray-400">
     <script type="module" src="/_dist_/index.js"></script>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <header>
+      <h1 class="text-5xl flex items-end">
+        <span class="pr-4 text-green-600" aria-hidden="true">❯</span>
+        <span>#the-bullpen</span>
+        <span class="inline-block animate-blink" aria-hidden="true">▮</span>
+      </h1>
+    </header>
+    <main class="grid lg:grid-cols-2 gap-4">
+      <section class="col-span-2">
+        <h2 class="text-3xl text-orange-300">Links</h2>
+        <ul class="list-disc">
+          <li>
+            <a
+              class="text-blue-400 transition-colors duration-200 hover:text-blue-600"
+              href="https://github.com/carterworks/the-bullpen"
+              >Source code</a
+            >—Make a change, write a pull request!
+          </li>
+          <li>
+            Chat is currently in a 7-person group on ICE's Microsoft Teams.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="text-3xl text-orange-300">Review Chooser</h2>
+        <iframe
+          src="https://wheeldecide.com/e.php?c1=Thad&c2=Joe&c3=Bryce&c4=Abby&c5=Carter&c6=Bryson&col=gbblackp&t=The+Bullpen&time=5&remove=1"
+          width="500"
+          height="500"
+          scrolling="no"
+          frameborder="0"
+        ></iframe>
+      </section>
+      <section class="max-w-lg">
+        <h2 class="text-3xl text-orange-300">Changelog</h2>
+        <h3 class="text-2xl text-purple-500">v1—May 2016</h3>
+        <p>
+          First The Bullpen™ was started for those sitting in the bullpen area
+          of the old office.
+        </p>
+        <h3 class="text-2xl text-purple-500">v2—May 2017</h3>
+        <p>
+          Dave left and Lance was made the admin for the room, so we couldn't
+          make changes or add new people (without talking to Lance, which Nate
+          was too afraid to do). A new public The Bullpen room was created to
+          avoid this issue in the future, and the original was abandoned.
+        </p>
+        <h3 class="text-2xl text-purple-500">v3—October 2017</h3>
+        <p>Simplifile moved into the new office.</p>
+        <h3 class="text-2xl text-purple-500">v4—December 2018</h3>
+        <p>The great seat reshuffling in preparation for new interns.</p>
+        <h3 class="text-2xl text-purple-500">v5—January 2019</h3>
+        <p>Simplifile switched from HipChat to Slack🎉</p>
+        <h3 class="text-2xl text-purple-500">v10—2019</h3>
+        <p>
+          Various reshufflings around people coming and going due to school and
+          changes in departments.
+        </p>
+        <h3 class="text-2xl text-purple-500">v11—July 2020</h3>
+        <p>
+          Simplifile switched from Slack to Microsoft Teams as part of the ICE
+          merger process.
+        </p>
+        <h3 class="text-2xl text-purple-500">v11.1—August 2020</h3>
+        <p>
+          Lance deletes the previous The Bullpen™ because channels need to be
+          <q>business specific, so no personal or hobby-type Channels</q> 😢.
+          It's converted to a group chat in Teams, but it's probably not long
+          lived since it still falls under ICE's 7-year data retention policies.
+        </p>
+      </section>
+    </main>
   </body>
 </html>
