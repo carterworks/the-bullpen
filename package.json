@@ -10,9 +10,21 @@
     "tailwindcss": "^1.6.2"
   },
   "devDependencies": {
+    "husky": ">=4",
+    "lint-staged": ">=10",
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
     "prettier": "^2.0.5",
     "snowpack": "^2.7.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "prettier --write",
+    "*.html": "prettier --write",
+    "*.css": "prettier --write"
   }
 }
