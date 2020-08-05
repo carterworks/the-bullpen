@@ -5,6 +5,19 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="The usual tomfoolery" />
+    <style>
+      @font-face {
+        font-family: 'JetBrainsMono';
+        src: url('/static/JetBrainsMono-Regular.woff2') format('woff2'),
+          url('/static/JetBrainsMono-Regular.woff') format('woff');
+
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        font-variant-ligatures: discretionary-ligatures common-ligatures
+          contextual;
+      }
+    </style>
     <link rel="stylesheet" type="text/css" href="/index.css" />
     <title>#the-bullpen</title>
   </head>
@@ -12,13 +25,13 @@
     <script type="module" src="/_dist_/index.js"></script>
     <header>
       <h1 class="text-5xl flex items-end">
-        <span class="pr-4 text-green-600" aria-hidden="true">❯</span>
+        <span class="pr-4 text-green-600 self-start" aria-hidden="true">❯</span>
         <span>#the-bullpen</span>
         <span class="inline-block animate-blink" aria-hidden="true">▮</span>
       </h1>
     </header>
     <main class="grid lg:grid-cols-2 gap-4">
-      <section class="col-span-2">
+      <section class="lg:col-span-2">
         <h2 class="text-3xl text-orange-300">Links</h2>
         <ul class="list-disc">
           <li>
@@ -37,6 +50,7 @@
         <h2 class="text-3xl text-orange-300">Review Chooser</h2>
         <iframe
           src="https://wheeldecide.com/e.php?c1=Thad&c2=Joe&c3=Bryce&c4=Abby&c5=Carter&c6=Bryson&col=gbblackp&t=The+Bullpen&time=5&remove=1"
+          title="Wheel-o-decide review chooser"
           width="500"
           height="500"
           scrolling="no"

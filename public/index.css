@@ -2,21 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@font-face {
-  font-family: 'JetBrainsMono';
-  src: url('/static/JetBrainsMono-Regular.woff2') format('woff2'),
-    url('/static/JetBrainsMono-Regular.woff') format('woff');
-
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
   font-size: 20px;
-}
-
-* {
-  -webkit-font-feature-settings: 'liga' on, 'calt' on;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
