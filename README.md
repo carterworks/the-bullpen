@@ -1,4 +1,4 @@
-# [#the-bullpen](https://the-bullpen.carter.works)
+# [#the-bullpen](https://the-bullpen.netlify.app/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a2e1344e-75a8-4102-a30e-20b7ec3d7c5e/deploy-status)](https://app.netlify.com/sites/the-bullpen/deploys)
 
