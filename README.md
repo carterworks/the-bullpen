@@ -6,9 +6,15 @@
 
 The small site representing community called "The Bullpen", starting at Simplifile.
 
-Built with [snowpack](https://snowpack.dev), [Tailwindcss](https://tailwindcss.com), [Netlify](https://netlify.com), and [Prettier](https://prettier.io)
+Built with [snowpack](https://snowpack.dev), [Tailwindcss](https://tailwindcss.com), [Netlify](https://netlify.com), and [Prettier](https://prettier.io).
 
 ## Available Scripts
+
+### `nix-shell`
+
+Activate the build environment as defined in [`shell.nix`](./shell.nix) if you use the [Nix package manager](https://nixos.org/).
+
+If you don't use that, it basically tells you that this site was developed with the latest versions of [yarn v1](https://yarnpkg.com/), [nodejs](https://nodejs.org/en/), and whatever non-IE browser that supports ESM modules (for snowpack).
 
 ### `yarn start`
 
