@@ -5,7 +5,8 @@ export default {
   },
   "devOptions": {
     "tailwindConfig": "./tailwind.config.js",
-    "port": 8080
+    "port": 8080,
+    "open": "none"
   },
   "plugins": [
     "@snowpack/plugin-postcss"
