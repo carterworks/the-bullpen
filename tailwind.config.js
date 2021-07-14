@@ -1,8 +1,7 @@
 module.exports = {
+  mode: 'jit',
   purge: [
-    './src/**/*.html',
-    './src/**/*.vue',
-    './src/**/*.jsx',
+    './src/**/*.{html,vue,js,jsx,ts,tsx,vue}',
     './public/**/*.html',
   ],
   theme: {

@@ -4,3 +4,8 @@
 
 [functions]
   directory = "api"
+
+[dev]
+  command = "yarn start"
+  targetPort = 8080
+  publish = "public"
