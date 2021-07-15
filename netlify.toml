@@ -1,0 +1,11 @@
+[build]
+  publish = "build/"
+  command = "yarn build"
+
+[functions]
+  directory = "api"
+
+[dev]
+  command = "yarn start"
+  targetPort = 8080
+  publish = "src"

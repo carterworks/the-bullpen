@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel=icon href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'/>">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="The usual tomfoolery" />
     <style>
@@ -18,21 +18,21 @@
           contextual;
       }
     </style>
-    <link rel="stylesheet" type="text/css" href="/index.css" />
+    <link rel="stylesheet" type="text/css" href="/dist/index.css" />
     <title>#the-bullpen</title>
   </head>
   <body class="p-8 font-mono bg-gray-900 text-gray-400">
-    <script type="module" src="/_dist_/index.js"></script>
+    <script type="module" src="/dist/main.js"></script>
     <header>
       <h1 class="text-5xl flex items-end">
-        <span class="pr-4 text-green-600 self-start" aria-hidden="true">❯</span>
+        <span class="pr-4 text-green-600 self-start select-none" aria-hidden="true">❯</span>
         <span>#the-bullpen</span>
-        <span class="inline-block animate-blink" aria-hidden="true">▮</span>
+        <span class="inline-block animate-blink select-none" aria-hidden="true">▮</span>
       </h1>
     </header>
     <main class="grid lg:grid-cols-2 gap-4">
       <section class="lg:col-span-2 lg:max-w-2xl">
-        <h2 class="text-3xl text-orange-300">Links</h2>
+        <h2 class="text-3xl text-green-600">Links</h2>
         <ul class="list-disc">
           <li>
             <a
@@ -51,19 +51,50 @@
           </li>
         </ul>
       </section>
-      <section>
-        <h2 class="text-3xl text-orange-300">Submitter Review Chooser</h2>
-        <iframe
-          src="https://wheeldecide.com/e.php?c1=Thad&c2=Joe&c3=Bryce&c4=Abby&c5=Carter&c6=Bryson&c7=Nate&col=gbblackp&t=The+Bullpen&time=5&remove=1"
-          title="Wheel-o-decide review chooser"
-          width="500"
-          height="500"
-          scrolling="no"
-          frameborder="0"
-        ></iframe>
-      </section>
       <section class="max-w-lg">
-        <h2 class="text-3xl text-orange-300">Changelog</h2>
+        <h2 class="text-3xl text-green-600">Review Chooser</h2>
+        <div id="review-choosers"></div>
+        <div class="no-js-only">
+          <ul class="list-disc">
+            <li>
+              <a target="_blank" rel="noopener noreferrer" class="text-blue-400 transition-colors duration-200 hover:text-blue-100 hover:underline" href="/.netlify/functions/choose?team=submitter">Random name from the Submitter front-end team</a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer" class="text-blue-400 transition-colors duration-200 hover:text-blue-100 hover:underline" href="/.netlify/functions/choose?team=falcon">Randon name from the Falcon team</a>
+            </li>
+          </ul>
+        </div>
+        <div class="max-w-lg order-last">
+        <h2 class="text-3xl text-green-600">API</h2>
+        <p>
+          <h3>Endpoint: <code class="bg-gray-800 px-2 rounded text-red-400">/.netlify/functions/choose</code></h3>
+          <div>Provide a comma-separated list of names as a query parameter <code class="bg-gray-800 px-2 rounded text-red-400">choices</code> and it will select one randomly</div>
+          <div>
+            <pre class="whitespace-pre-line bg-gray-800 p-2 rounded"><code><span class="text-green-600 select-none">$</span><span class="text-purple-500"> curl</span> <a target="_blank" rel="noopener noreferrer" class="text-blue-400 transition-colors duration-200 hover:text-blue-100 hover:underline" href="/.netlify/functions/choose?choices=Alpha,Bravo,Charlie">"https://the-bullpen.netlify.app/.netlify/functions/choose?choices=Alpha,Bravo,Charlie"</a>
+  Bravo
+            </code></pre>
+          </div>
+          <div>You may use a preset list of names by providing a <code class="bg-gray-800 px-2 rounded text-red-400">team</code> query parameter, like <code class="bg-gray-800 px-2 rounded text-red-400">"submitter"</code> or <code class="bg-gray-800 px-2 rounded text-red-400">"falcon"</code>.</div>
+          <div>
+            <pre class="whitespace-pre-line bg-gray-800 p-2 rounded"><code><span class="text-green-600 select-none">$</span><span class="text-purple-500"> curl</span> <a target="_blank" rel="noopener noreferrer" class="text-blue-400 transition-colors duration-200 hover:text-blue-100 hover:underline" href="/.netlify/functions/choose?team=nato">"https://the-bullpen.netlify.app/.netlify/functions/choose?team=nato"</a>
+  Bravo
+            </code></pre>
+          </div>
+        </p>
+        <p class="mt-4">
+          <h3>Endpoint: <code class="bg-gray-800 px-2 rounded text-red-400">/.netlify/functions/getTeams</code></h3>
+          <div>Returns a JSON object of valid teams for the <code class="bg-gray-800 px-2 rounded text-red-400">choose</code> endpoint.</div>
+          <div>
+            <pre class="whitespace-pre-line bg-gray-800 p-2 rounded"><code><span class="text-green-600 select-none">$</span><span class="text-purple-500"> curl</span> <a target="_blank" rel="noopener noreferrer" class="text-blue-400 transition-colors duration-200 hover:text-blue-100 hover:underline" href="/.netlify/functions/getTeams">"https://the-bullpen.netlify.app/.netlify/functions/getTeams"</a>
+  {"nato":["Alpha","Bravo","Charlie"]}
+            </code></pre>
+          </div>
+        </p>
+      </div>
+      </section>
+
+      <section class="max-w-lg">
+        <h2 class="text-3xl text-green-600">Changelog</h2>
         <h3 class="text-2xl text-purple-500">v1—May 2016</h3>
         <p>
           First The Bullpen™ was started for those sitting in the bullpen area
