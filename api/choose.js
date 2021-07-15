@@ -13,19 +13,25 @@ function chooseRandomElement(choices) {
 }
 
 exports.handler = async (event) => {
-  const teamName = event.queryStringParameters?.team?.toLowerCase();
+  const teamName = (
+    (event.queryStringParameters || {}).team || {}
+  ).toLowerCase();
   let choices;
   if (teamName) {
     choices = teams[teamName];
   } else {
-    choices = event.queryStringParameters?.choices?.split(',');
+    choices = ((event.queryStringParameters || {}).choices || '').split(',');
   }
   if (!choices || choices.length === 0) {
     const validTeamNames = Object.keys(teams)
       .map((s) => `"${s}"`)
       .join(', ');
     let body;
-    if (teamName && !teams[teamName] && !event.queryStringParameters?.choices) {
+    if (
+      teamName &&
+      !teams[teamName] &&
+      !(event.queryStringParameters || {}).choices
+    ) {
       body = `Name "${teamName}" is an invalid team name. Valid names are: ${validTeamNames}`;
     } else {
       body = `Missing required query parameters. Must have "team" (valid values are: ${validTeamNames}) or "choices" (valid values is a comma-separated, like "Alpha,Bravo,Charlie")`;
