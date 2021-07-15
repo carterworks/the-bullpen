@@ -51,7 +51,7 @@
           </li>
         </ul>
       </section>
-      <section>
+      <section class="max-w-lg">
         <h2 class="text-3xl text-green-600">Review Chooser</h2>
         <div id="review-choosers"></div>
         <div class="no-js-only">
@@ -64,18 +64,35 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section>
+        <div class="max-w-lg order-last">
         <h2 class="text-3xl text-green-600">API</h2>
         <p>
-          <div>You can also <code class="bg-gray-800 px-2 rounded text-red-400">curl</code> (or any other favorite request maker). Just query <code class="bg-gray-800 px-2 rounded text-red-400"><THIS PAGE'S URL>/.netlify/functions/choose</code> use the url parameter <code>choices</code> as a comma-separated list specify the list of names.</div>
+          <h4>Endpoint: <code class="bg-gray-800 px-2 rounded text-red-400">/.netlify/functions/choose</code></h4>
+          <div>Provide a comma-separated list of names as a query parameter <code class="bg-gray-800 px-2 rounded text-red-400">choices</code> and it will select one randomly</div>
           <div>
             <pre class="whitespace-pre-line bg-gray-800 p-2 rounded"><code><span class="text-green-600 select-none">$</span><span class="text-purple-500"> curl</span> <a target="_blank" rel="noopener noreferrer" class="text-blue-400 transition-colors duration-200 hover:text-blue-100 hover:underline" href="/.netlify/functions/choose?choices=Alpha,Bravo,Charlie">"https://the-bullpen.netlify.app/.netlify/functions/choose?choices=Alpha,Bravo,Charlie"</a>
   Bravo
             </code></pre>
           </div>
+          <div>You may use a preset list of names by providing a <code class="bg-gray-800 px-2 rounded text-red-400">team</code> query parameter, like <code class="bg-gray-800 px-2 rounded text-red-400">"submitter"</code> or <code class="bg-gray-800 px-2 rounded text-red-400">"falcon"</code>.</div>
+          <div>
+            <pre class="whitespace-pre-line bg-gray-800 p-2 rounded"><code><span class="text-green-600 select-none">$</span><span class="text-purple-500"> curl</span> <a target="_blank" rel="noopener noreferrer" class="text-blue-400 transition-colors duration-200 hover:text-blue-100 hover:underline" href="/.netlify/functions/choose?team=moonlanding">"https://the-bullpen.netlify.app/.netlify/functions/choose?team=moonlanding"</a>
+  Bravo
+            </code></pre>
+          </div>
         </p>
+        <p class="mt-4">
+          <h4>Endpoint: <code class="bg-gray-800 px-2 rounded text-red-400">/.netlify/functions/getTeams</code></h4>
+          <div>Returns a JSON object of valid teams for the <code class="bg-gray-800 px-2 rounded text-red-400">choose</code> endpoint.</div>
+          <div>
+            <pre class="whitespace-pre-line bg-gray-800 p-2 rounded"><code><span class="text-green-600 select-none">$</span><span class="text-purple-500"> curl</span> <a target="_blank" rel="noopener noreferrer" class="text-blue-400 transition-colors duration-200 hover:text-blue-100 hover:underline" href="/.netlify/functions/getTeams">"https://the-bullpen.netlify.app/.netlify/functions/getTeams"</a>
+  {"moonlanding":["Alpha","Bravo","Charlie"]}
+            </code></pre>
+          </div>
+        </p>
+      </div>
       </section>
+
       <section class="max-w-lg">
         <h2 class="text-3xl text-green-600">Changelog</h2>
         <h3 class="text-2xl text-purple-500">v1—May 2016</h3>
