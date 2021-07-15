@@ -14,7 +14,7 @@ function chooseRandomElement(choices) {
 
 exports.handler = async (event) => {
   const teamName = (
-    (event.queryStringParameters || {}).team || {}
+    (event.queryStringParameters || {}).team || ''
   ).toLowerCase();
   let choices;
   if (teamName) {
