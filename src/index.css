@@ -5,7 +5,3 @@
 :root {
   font-size: 20px;
 }
-
-[x-cloak] {
-  display: none !important;
-}
