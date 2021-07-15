@@ -25,9 +25,9 @@
     <script type="module" src="/dist/main.js"></script>
     <header>
       <h1 class="text-5xl flex items-end">
-        <span class="pr-4 text-green-600 self-start" aria-hidden="true">❯</span>
+        <span class="pr-4 text-green-600 self-start select-none" aria-hidden="true">❯</span>
         <span>#the-bullpen</span>
-        <span class="inline-block animate-blink" aria-hidden="true">▮</span>
+        <span class="inline-block animate-blink select-none" aria-hidden="true">▮</span>
       </h1>
     </header>
     <main class="grid lg:grid-cols-2 gap-4">
@@ -64,7 +64,7 @@
             <li>
               <p>or, you can use <code class="bg-gray-800 px-2 rounded text-red-400">curl</code> (or any other favorite request maker). Just query <code class="bg-gray-800 px-2 rounded text-red-400"><THIS PAGE'S URL>/.netlify/functions/choose</code> use the url parameter <code>choices</code> as a comma-separated list specify the list of names.</p>
               <p>
-                <pre class="whitespace-pre-line bg-gray-800 p-2 rounded "><code><span class="text-green-600 pointer-events-none">$</span><span class="text-purple-500"> curl</span> <a target="_blank" rel="noopener noreferrer" class="text-blue-400 transition-colors duration-200 hover:text-blue-100 hover:underline" href="/.netlify/functions/choose?choices=Alpha,Bravo,Charlie">"https://the-bullpen.netlify.app/.netlify/functions/choose?choices=Alpha,Bravo,Charlie"</a>
+                <pre class="whitespace-pre-line bg-gray-800 p-2 rounded"><code><span class="text-green-600 select-none">$</span><span class="text-purple-500"> curl</span> <a target="_blank" rel="noopener noreferrer" class="text-blue-400 transition-colors duration-200 hover:text-blue-100 hover:underline" href="/.netlify/functions/choose?choices=Alpha,Bravo,Charlie">"https://the-bullpen.netlify.app/.netlify/functions/choose?choices=Alpha,Bravo,Charlie"</a>
 Bravo
                 </code></pre>
               </p>

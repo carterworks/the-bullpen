@@ -1,4 +1,4 @@
-const { teams } = require('./get-teams');
+const { teams } = require('./getTeams');
 
 // get int in range [min, max]
 function randInt(max, min = 0) {

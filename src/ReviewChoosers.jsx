@@ -1,9 +1,10 @@
 import { h } from 'preact';
 import { WheelODecide } from './WheelODecide';
 import { useGetRequest } from './api';
+import { TeamPicker } from './TeamPicker';
 
 export function ReviewChoosers() {
-  const [error, loading, response] = useGetRequest('/.netlify/functions/ping');
+  const [error, loading] = useGetRequest('/.netlify/functions/ping');
   if (loading) {
     return <h3>Loading review chooser…</h3>;
   }
@@ -11,5 +12,5 @@ export function ReviewChoosers() {
     console.error('/.netlify/functions/ping failed', error);
     return <WheelODecide />;
   }
-  return <h1>Hello world!</h1>;
+  return <TeamPicker />;
 }
