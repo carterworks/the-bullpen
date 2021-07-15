@@ -32,7 +32,7 @@
     </header>
     <main class="grid lg:grid-cols-2 gap-4">
       <section class="lg:col-span-2 lg:max-w-2xl">
-        <h2 class="text-3xl text-orange-300">Links</h2>
+        <h2 class="text-3xl text-green-600">Links</h2>
         <ul class="list-disc">
           <li>
             <a
@@ -52,7 +52,8 @@
         </ul>
       </section>
       <section>
-        <h2 class="text-3xl text-orange-300">Review Chooser</h2>
+        <h2 class="text-3xl text-green-600">Review Chooser</h2>
+        <div id="review-choosers"></div>
         <div class="no-js-only">
           <ul class="list-disc">
             <li>
@@ -61,22 +62,22 @@
             <li>
               <a target="_blank" rel="noopener noreferrer" class="text-blue-400 transition-colors duration-200 hover:text-blue-100 hover:underline" href="/.netlify/functions/choose?team=falcon">Randon name from the Falcon team</a>
             </li>
-            <li>
-              <p>or, you can use <code class="bg-gray-800 px-2 rounded text-red-400">curl</code> (or any other favorite request maker). Just query <code class="bg-gray-800 px-2 rounded text-red-400"><THIS PAGE'S URL>/.netlify/functions/choose</code> use the url parameter <code>choices</code> as a comma-separated list specify the list of names.</p>
-              <p>
-                <pre class="whitespace-pre-line bg-gray-800 p-2 rounded"><code><span class="text-green-600 select-none">$</span><span class="text-purple-500"> curl</span> <a target="_blank" rel="noopener noreferrer" class="text-blue-400 transition-colors duration-200 hover:text-blue-100 hover:underline" href="/.netlify/functions/choose?choices=Alpha,Bravo,Charlie">"https://the-bullpen.netlify.app/.netlify/functions/choose?choices=Alpha,Bravo,Charlie"</a>
-Bravo
-                </code></pre>
-              </p>
-            </li>
           </ul>
         </div>
-        <div id="review-choosers">
-
-        </div>
+      </section>
+      <section>
+        <h2 class="text-3xl text-green-600">API</h2>
+        <p>
+          <div>You can also <code class="bg-gray-800 px-2 rounded text-red-400">curl</code> (or any other favorite request maker). Just query <code class="bg-gray-800 px-2 rounded text-red-400"><THIS PAGE'S URL>/.netlify/functions/choose</code> use the url parameter <code>choices</code> as a comma-separated list specify the list of names.</div>
+          <div>
+            <pre class="whitespace-pre-line bg-gray-800 p-2 rounded"><code><span class="text-green-600 select-none">$</span><span class="text-purple-500"> curl</span> <a target="_blank" rel="noopener noreferrer" class="text-blue-400 transition-colors duration-200 hover:text-blue-100 hover:underline" href="/.netlify/functions/choose?choices=Alpha,Bravo,Charlie">"https://the-bullpen.netlify.app/.netlify/functions/choose?choices=Alpha,Bravo,Charlie"</a>
+  Bravo
+            </code></pre>
+          </div>
+        </p>
       </section>
       <section class="max-w-lg">
-        <h2 class="text-3xl text-orange-300">Changelog</h2>
+        <h2 class="text-3xl text-green-600">Changelog</h2>
         <h3 class="text-2xl text-purple-500">v1—May 2016</h3>
         <p>
           First The Bullpen™ was started for those sitting in the bullpen area
