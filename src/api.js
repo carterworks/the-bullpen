@@ -28,7 +28,7 @@ export function useGetRequest(endpoint, isJson = false) {
 
   useEffect(() => {
     getApiEndpoint(endpoint, setError, setLoading, setResponse, isJson);
-  }, [endpoint]);
+  }, [endpoint, isJson]);
 
   return [error, loading, response];
 }
