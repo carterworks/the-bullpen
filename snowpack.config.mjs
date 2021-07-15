@@ -1,14 +1,12 @@
 export default {
-  "mount": {
-    "public": "/",
-    "src": "/_dist_"
+  mount: {
+    public: '/',
+    src: '/dist',
   },
-  "devOptions": {
-    "tailwindConfig": "./tailwind.config.js",
-    "port": 8080,
-    "open": "none"
+  devOptions: {
+    tailwindConfig: './tailwind.config.js',
+    port: 8080,
+    open: 'none',
   },
-  "plugins": [
-    "@snowpack/plugin-postcss"
-  ],
-}
+  plugins: ['@snowpack/plugin-postcss'],
+};
